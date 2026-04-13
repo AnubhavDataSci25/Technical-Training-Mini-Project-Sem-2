@@ -10,7 +10,6 @@ struct Student {
     float marks;
 };
 
-// 🎨 UI FUNCTIONS
 void clearScreen() {
     system("cls || clear");
 }
@@ -25,7 +24,6 @@ void printTitle() {
     printLine();
 }
 
-// ➕ ADD STUDENT
 void addStudent() {
     FILE *fp = fopen(FILE_NAME, "ab");
     struct Student s;
@@ -50,7 +48,6 @@ void addStudent() {
     getchar(); getchar();
 }
 
-// 📋 VIEW STUDENTS
 void viewStudents() {
     FILE *fp = fopen(FILE_NAME, "rb");
     struct Student s;
@@ -71,7 +68,6 @@ void viewStudents() {
     getchar(); getchar();
 }
 
-// 🔍 SEARCH STUDENT
 void searchStudent() {
     FILE *fp = fopen(FILE_NAME, "rb");
     struct Student s;
@@ -106,7 +102,6 @@ void searchStudent() {
     getchar(); getchar();
 }
 
-// 🏠 MAIN MENU
 void menu() {
     int choice;
 
@@ -143,7 +138,7 @@ void menu() {
     }
 }
 
-// 🚀 MAIN FUNCTION
+// MAIN FUNCTION
 int main() {
     menu();
     return 0;
